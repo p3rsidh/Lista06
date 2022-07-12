@@ -4,26 +4,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Coordenadores extends Funcionarios {
-    List professoresSupervisionados = new ArrayList();
 
 
-     Coordenadores(String nome, String CPF, String numeroDeRegistro, String orgaoDeLotacao, double salario,List professoresSupervisionados ) {
+   int professoresSupervisionados = 0;
+
+     Coordenadores(String nome, String CPF, String numeroDeRegistro, String orgaoDeLotacao, double salario, int professoresSupervisionados) {
         super(nome, CPF, numeroDeRegistro, orgaoDeLotacao, salario);
         this.professoresSupervisionados = professoresSupervisionados;
-
     }
-        Coordenadores Cordenador1 = new Coordenadores("Balungo", "4365634241", "321", "Ploc", 10000, professoresSupervisionados);
+
     @Override
     public void aumentoSalario() {
-        setSalario(getSalario()* 0.05);
+        setSalario(getSalario() + (getSalario()* 0.05));
+        System.out.println("O novo salario de " +getNome() +" e " +getSalario());
 
     }
-
     public void adicionarProfessor(){
-        if (professoresSupervisionados.size() > 5){
-            System.out.println("Não podem ser adicionados mais professores");
+       if (professoresSupervisionados == 5){
+        System.out.println("Não podem ser adicionados mais professores, voce so pode supervisionar ate 5 professores.");
         } else {
-        Professores profAdd = new Professores("Roberta", "123109872", "432", "Taubate", 123.345, "Graduacao", "Historia", 25, 2);
-        professoresSupervisionados.add(profAdd);
+       System.out.println("Novo professor adicionado");
+        professoresSupervisionados += 1;
     }}
+
+    public int getProfessoresSupervisionados() {
+        return professoresSupervisionados;
+    }
+
+    public void setProfessoresSupervisionados(int professoresSupervisionados) {
+        this.professoresSupervisionados = professoresSupervisionados;
+    }
 }

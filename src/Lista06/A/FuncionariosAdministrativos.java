@@ -8,10 +8,11 @@ public class FuncionariosAdministrativos extends Funcionarios{
         this.funcaoAdministrativa = funcaoAdministrativa;
         this.senioridade = senioridade;
     }
-    FuncionariosAdministrativos funcionario1 = new FuncionariosAdministrativos("Carlos", "231413212", "001", "Clopos", 12.312, "Cobrador", "Pleno");
+
     @Override
     public void aumentoSalario() {
-        setSalario(getSalario()* 0.1);
+        setSalario(getSalario() + (getSalario()* 0.1));
+        System.out.println("O novo salario de " +getNome() +" e " +getSalario());
     }
 
 }
