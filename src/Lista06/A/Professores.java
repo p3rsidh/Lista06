@@ -30,7 +30,7 @@ public class Professores extends Funcionarios {
     }
 
     public void adicionarTurma() {
-        quantidadeTurmas = +1;
+        setQuantidadeTurmas(getQuantidadeTurmas() + 1);
         System.out.println("Turma adicionada, agora sao " + quantidadeTurmas + " turmas");
 
     }
