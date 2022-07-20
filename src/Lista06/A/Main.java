@@ -28,6 +28,7 @@ public class Main {
         prof1.adicionarEstagiario();
         prof1.adicionarEstagiario();
         System.out.println("___________________________");
+        prof1.reembolsoDespesas();
 
         //Coordenador
 
@@ -37,6 +38,7 @@ public class Main {
         Coordenador1.aumentoSalario();
         Coordenador1.adicionarProfessor();
         Coordenador1.adicionarProfessor();
+        Coordenador1.reembolsoDespesas();
         System.out.println("___________________________");
 
         //FuncionarioAdm
@@ -46,13 +48,14 @@ public class Main {
         System.out.println("Recebe aumento");
         funcionario1.aumentoSalario();
         System.out.println("___________________________");
+        funcionario1.reembolsoDespesas();
 
         //Estagiario
 
         System.out.println(estag1.getNome());
         System.out.println("A bolsa do estagiario e de: " +estag1.getBolsa());
-        System.out.println("Recebe aumento");
-        estag1.aumentoSalario();
+        estag1.reembolsoDespesas();
+        estag1.trocaValorDaBolsa();
         System.out.println("___________________________");
 
     }

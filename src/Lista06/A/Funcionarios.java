@@ -1,6 +1,6 @@
 package Lista06.A;
 
-public abstract class Funcionarios implements modificaSalario {
+public abstract class Funcionarios implements AtualizacaoDeValoresAReceber {
 
     private String nome;
     private String CPF;
@@ -14,6 +14,11 @@ public abstract class Funcionarios implements modificaSalario {
         this.numeroDeRegistro = numeroDeRegistro;
         this.orgaoDeLotacao = orgaoDeLotacao;
         this.salario = salario;
+    }
+
+    //PARA AUMENTAR O SALARIO:
+    void aumentoSalario(){
+
     }
 
     public String getNome() {
@@ -56,5 +61,6 @@ public abstract class Funcionarios implements modificaSalario {
         this.salario = salario;
     }
 
-    public abstract void aumentoSalario();
+
+
 }

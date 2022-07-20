@@ -31,6 +31,17 @@ public class Professores extends Funcionarios {
         System.out.println("Novo salario de " + getNome() + " e " + getSalario());
     }
 
+    @Override
+    public void reembolsoDespesas() {
+        System.out.println("Lembre-se que você apenas receberá um valor de até 95% do valor");
+        System.out.println("Qual o valor sobre o qual pedirá valor?");
+        double pedidoDeReembolso = 6456;
+        System.out.println(getNome() +" pediu reembolso de " +pedidoDeReembolso);
+        double valorReembolsado = (pedidoDeReembolso * 0.95);
+        System.out.println("Sera reembolsado um valor de: " +valorReembolsado);
+
+    }
+
     public void adicionarTurma() {
         setQuantidadeTurmas(getQuantidadeTurmas() + 1);
         System.out.println("Turma adicionada, agora sao " + quantidadeTurmas + " turmas");
