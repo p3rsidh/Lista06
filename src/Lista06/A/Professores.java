@@ -10,6 +10,8 @@ public class Professores extends Funcionarios {
     private final String disciplina;
     private int quantidadeTurmas;
 
+    ArrayList<Estagiarios> estagiariosSupervisionados = new ArrayList<>();
+    int limiteSupervisionados;
 
 
     Professores(String nome, String CPF, String numeroDeRegistro, String orgaoDeLotacao, double salario, String nivelGraduacao, String disciplina, int quantidadeAlunos, int quantidadeTurma) {
@@ -18,7 +20,7 @@ public class Professores extends Funcionarios {
         this.disciplina = disciplina;
         this.quantidadeAlunos = quantidadeAlunos;
         this.quantidadeTurmas = quantidadeTurma;
-        ;
+
 
     }
 
@@ -32,6 +34,16 @@ public class Professores extends Funcionarios {
     public void adicionarTurma() {
         setQuantidadeTurmas(getQuantidadeTurmas() + 1);
         System.out.println("Turma adicionada, agora sao " + quantidadeTurmas + " turmas");
+
+    }
+    void adicionarEstagiario(){
+        if(estagiariosSupervisionados.size() < 3){
+            System.out.println("Estagiario adicionado");
+            estagiariosSupervisionados.add(new Estagiarios("Livio", "4234235", "2342342", "Mina", 100));
+        } else {
+            System.out.println("Pedido rejeitado");
+            System.out.println("Não podem ser adicionados mais do que 3 estagiarios supervisionados");
+        }
 
     }
 

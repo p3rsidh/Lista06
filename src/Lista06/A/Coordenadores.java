@@ -1,9 +1,8 @@
 package Lista06.A;
 
 import java.util.HashSet;
-import java.util.Iterator;
 
-public class Coordenadores extends Funcionarios {
+public class Coordenadores extends Funcionarios{
 
     HashSet<Professores> professoresSupervisionados = new HashSet<Professores>();
 
@@ -25,6 +24,7 @@ public class Coordenadores extends Funcionarios {
         } else {
             System.out.println("Novo professor adicionado");
             professoresSupervisionados.add(new Professores("Flavio", "12312441", "321", "Flanco", 312.432, "Pos", "Biologia", 7, 2));
+
         }
     }
 
